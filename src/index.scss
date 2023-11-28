@@ -1,3 +1,4 @@
+@use "./variables.scss" as *;
 // https://www.joshwcomeau.com/css/custom-css-reset/
 *,
 *::before,
@@ -7,6 +8,7 @@
 	box-sizing: border-box;
 }
 body {
+	background-color: $Alabaster;
 	font-family: "Ubuntu", sans-serif;
 	height: 100dvh;
 	width: 100vw;
@@ -47,6 +49,13 @@ ul {
 }
 /* sm */
 @media (min-width: 640px) {
+	#root {
+		width: 100vw;
+		height: 100dvh;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
 }
 /* md */
 @media (min-width: 768px) {
