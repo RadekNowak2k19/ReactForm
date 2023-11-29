@@ -1,0 +1,30 @@
+@use "../variables.scss" as *;
+.btn {
+	background-color: transparent;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	padding: 8px 20px;
+}
+.goBack {
+	color: $coolGray;
+}
+.goBack:hover {
+	color: black;
+}
+.nextStep {
+	color: $white;
+	background-color: $marineBlue;
+}
+.nextStep:hover {
+	background-color: $purplishBlue;
+}
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// Responsive Design
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+/* sm */
+@media (min-width: 640px) {
+	.goBack {
+		padding: 8px 20px 8px 0;
+	}
+}

@@ -1,4 +1,5 @@
 import styles from "./App.module.scss";
+import { Button } from "./ui/Button";
 export const App = () => {
 	return (
 		<div className={styles.formElement}>
@@ -36,8 +37,12 @@ export const App = () => {
 					</div>
 				</div>
 				<div className={styles.buttons}>
-					<button>Go Back</button>
-					<button>NextStep</button>
+					<Button onClick={() => console.log("clicked")} propsStyles="goBack">
+						Go Back
+					</Button>
+					<Button onClick={() => console.log("clicked")} propsStyles="nextStep">
+						Next Step
+					</Button>
 				</div>
 			</div>
 		</div>
