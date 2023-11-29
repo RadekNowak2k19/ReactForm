@@ -1,0 +1,42 @@
+@use "../variables.scss" as *;
+.steps {
+	align-items: center;
+	display: flex;
+
+	&_Dot {
+		background-color: transparent;
+		border: 1px solid $white;
+		border-radius: 100%;
+		color: $white;
+		height: 28px;
+		line-height: 1.7;
+		text-align: center;
+		width: 28px;
+	}
+	.step {
+		display: none;
+	}
+}
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// Responsive Design
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+/* sm */
+@media (min-width: 640px) {
+	.steps {
+		gap: 1rem;
+		margin-top: 1rem;
+		margin-left: 1rem;
+
+		.step {
+			display: block;
+			span {
+				color: $lightBlue;
+				font-size: 0.8rem;
+			}
+			p {
+				color: $white;
+				font-weight: bold;
+			}
+		}
+	}
+}
