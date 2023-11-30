@@ -1,5 +1,6 @@
 import { steps } from "../assets/data/steps";
 import { Button } from "../ui/Button";
+import { Input } from "../ui/Input";
 import { Steps } from "./Steps";
 export const StepOne = () => {
 	return (
@@ -17,27 +18,27 @@ export const StepOne = () => {
 							<p>Please provide your name, email, address, and phone number.</p>
 						</div>
 						<form>
-							<div className={`inputForm`}>
-								<div>
-									<label htmlFor="">Name</label>
-									<div>error</div>
-								</div>
-								<input type="text" placeholder="Name" />
-							</div>
-							<div className={`inputForm`}>
-								<div>
-									<label htmlFor="">Name</label>
-									<div>error</div>
-								</div>
-								<input type="text" placeholder="Name" />
-							</div>
-							<div className={`inputForm`}>
-								<div>
-									<label htmlFor="">Name</label>
-									<div>error</div>
-								</div>
-								<input type="text" placeholder="Name" />
-							</div>
+							<Input
+								type="text"
+								id="name"
+								label="Name"
+								placeholder="e.g Stephen King"
+								onInput={() => {}}
+							/>
+							<Input
+								type="email"
+								id="email"
+								label="Email Address"
+								placeholder="e.g stephenking@lorem.com"
+								onInput={() => {}}
+							/>
+							<Input
+								type="number"
+								id="number"
+								label="Number"
+								placeholder="e.g +123456789"
+								onInput={() => {}}
+							/>
 						</form>
 					</div>
 				</div>

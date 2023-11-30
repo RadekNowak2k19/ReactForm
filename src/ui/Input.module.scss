@@ -1,0 +1,25 @@
+@use "../variables.scss" as *;
+.inputContainer {
+	margin-bottom: 1rem;
+	&_Heading {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding: 4px 0;
+		label {
+			font-size: 14px;
+			color: $marineBlue;
+			font-weight: 600;
+		}
+		.inputError {
+			color: $strawberryRed;
+		}
+	}
+	input {
+		border: 1px solid $lightGray;
+		border-radius: $borderRadius;
+		color: $coolGray;
+		padding: 8px 12px;
+		width: 100%;
+	}
+}
