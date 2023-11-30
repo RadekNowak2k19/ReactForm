@@ -1,5 +1,7 @@
+import { headingArr } from "../assets/data/heading";
 import { steps } from "../assets/data/steps";
 import { Button } from "../ui/Button";
+import { Heading } from "../ui/Heading";
 import { Input } from "../ui/Input";
 import { Steps } from "./Steps";
 export const StepOne = () => {
@@ -13,10 +15,7 @@ export const StepOne = () => {
 			<div className={`formElement_stepsData`}>
 				<div className={`fillBackground`}>
 					<div className={`fillContainer`}>
-						<div>
-							<h2>Personal info</h2>
-							<p>Please provide your name, email, address, and phone number.</p>
-						</div>
+						<Heading headingProps={headingArr[0]} />
 						<form>
 							<Input
 								type="text"
