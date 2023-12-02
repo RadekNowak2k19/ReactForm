@@ -32,7 +32,7 @@
 	position: relative;
 	border-radius: $borderRadius;
 	padding: 16px 12px;
-	input {
+	.inputType {
 		border-radius: $borderRadius;
 		border: none;
 		top: 0;
@@ -46,6 +46,45 @@
 		display: flex;
 		gap: 1rem;
 		.text {
+			span {
+				color: $marineBlue;
+				font-weight: bold;
+			}
+			p {
+				padding-top: 0.25rem;
+				color: $coolGray;
+			}
+		}
+	}
+}
+.inputCheckboxType {
+	&:hover {
+		border: 1px solid $purplishBlue;
+	}
+	cursor: pointer;
+	border: 1px solid $coolGray;
+	position: relative;
+	border-radius: $borderRadius;
+	padding: 16px 12px;
+	.inputType {
+		border-radius: $borderRadius;
+		border: none;
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -10;
+	}
+	.inputBox {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		.text {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
 			span {
 				color: $marineBlue;
 				font-weight: bold;
@@ -73,6 +112,11 @@
 					height: 100%;
 				}
 			}
+		}
+	}
+	.inputCheckboxType {
+		.inputCheckBox {
+			width: max-content !important;
 		}
 	}
 }
