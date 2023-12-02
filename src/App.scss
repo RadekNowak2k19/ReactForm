@@ -58,7 +58,8 @@
 		background-color: $white;
 		flex-direction: row;
 		height: 400px;
-		width: 600px;
+		// width: 650px;
+		width: calc(100% - 2%);
 		margin: 0 auto;
 		padding: 12px;
 		border-radius: $borderRadius;
@@ -93,5 +94,11 @@
 				padding: 0;
 			}
 		}
+	}
+}
+/* md */
+@media (min-width: 768px) {
+	.formElement {
+		width: 700px;
 	}
 }

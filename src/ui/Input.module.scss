@@ -23,3 +23,56 @@
 		width: 100%;
 	}
 }
+.inputButtonType {
+	&:hover {
+		border: 1px solid $purplishBlue;
+	}
+	cursor: pointer;
+	border: 1px solid $coolGray;
+	position: relative;
+	border-radius: $borderRadius;
+	padding: 16px 12px;
+	input {
+		border-radius: $borderRadius;
+		border: none;
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -10;
+	}
+	.inputBox {
+		display: flex;
+		gap: 1rem;
+		.text {
+			span {
+				color: $marineBlue;
+				font-weight: bold;
+			}
+			p {
+				padding-top: 0.25rem;
+				color: $coolGray;
+			}
+		}
+	}
+}
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// Responsive Design
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+@media (min-width: 640px) {
+	.inputButtonType {
+		width: 120px;
+		.inputBox {
+			flex-direction: column;
+			.image {
+				width: 35px;
+				height: 35px;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
