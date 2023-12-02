@@ -6,7 +6,6 @@ type HeadingProps = {
 };
 
 export const Heading: FC<HeadingProps> = ({ headingProps }) => {
-	console.log(headingProps);
 	return (
 		<div className={styles.heading}>
 			<h2>{headingProps.title}</h2>
