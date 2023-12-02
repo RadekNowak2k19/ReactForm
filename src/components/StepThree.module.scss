@@ -1,0 +1,14 @@
+@use "../variables.scss" as *;
+.formContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// Responsive Design
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+@media (min-width: 640px) {
+	.formContainer {
+		// flex-direction: row;
+	}
+}

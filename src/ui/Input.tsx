@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./Input.module.scss";
 import { cutUrl } from "../helpers/cutUrl";
+import { Checkbox } from "./Checkbox";
 
 interface InputProps {
 	id: string;
@@ -10,6 +11,7 @@ interface InputProps {
 	image?: string;
 	onInput: () => void;
 	placeholder?: string;
+	adds?: { heading: string; paragraph: string };
 }
 
 export const Input: FC<InputProps> = ({
@@ -20,11 +22,12 @@ export const Input: FC<InputProps> = ({
 	price,
 	onInput,
 	placeholder,
+	adds,
 }) => {
 	if (type === "button") {
 		return (
 			<div className={styles.inputButtonType}>
-				<input type="button" id={id}></input>
+				<input className={styles.inputType} type="button" id={id}></input>
 				<div className={styles.inputBox}>
 					<div className={styles.image}>
 						<img src={image} alt={`Icon ${image}`} />
@@ -33,6 +36,24 @@ export const Input: FC<InputProps> = ({
 						<span>{cutUrl(33, -4, image)}</span>
 						<p>{`$${+price}/mo`}</p>
 					</div>
+				</div>
+			</div>
+		);
+	}
+
+	if (type === "checkbox") {
+		return (
+			<div className={styles.inputCheckboxType}>
+				<input className={styles.inputType} type="button" id={id}></input>
+				<div className={styles.inputBox}>
+					<div className={styles.text}>
+						<input className={styles.inputCheckBox} type="checkbox" />
+						<div>
+							<span>{adds?.heading}</span>
+							<p>{adds?.paragraph}</p>
+						</div>
+					</div>
+					<div>+$1/mo</div>
 				</div>
 			</div>
 		);

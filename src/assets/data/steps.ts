@@ -9,3 +9,16 @@ export const steps: StepsData[] = [
 	{ id: 2, stepValue: 3, stepText: "Add-ons" },
 	{ id: 3, stepValue: 4, stepText: "Summary" },
 ];
+export const stepsAdds = [
+	{
+		id: 0,
+		heading: "Online service",
+		paragraph: "Access ti multiplayer games",
+	},
+	{ id: 1, heading: "Larger storage", paragraph: "Extra 1TB of cloud save" },
+	{
+		id: 2,
+		heading: "Customizable profile",
+		paragraph: "Custom theme on your profile",
+	},
+];

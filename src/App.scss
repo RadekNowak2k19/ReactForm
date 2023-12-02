@@ -57,7 +57,7 @@
 	.formElement {
 		background-color: $white;
 		flex-direction: row;
-		height: 400px;
+		height: 500px;
 		// width: 650px;
 		width: calc(100% - 2%);
 		margin: 0 auto;
@@ -99,6 +99,7 @@
 /* md */
 @media (min-width: 768px) {
 	.formElement {
-		width: 700px;
+		// width: calc(100% - 10%);
+		width: 750px;
 	}
 }
