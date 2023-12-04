@@ -1,6 +1,7 @@
 import { StepOne } from "./components/StepOne";
 import { StepTwo } from "./components/StepTwo";
 import { StepThree } from "./components/StepThree";
+import { StepsFour } from "./components/StepFour";
 
 export const App = () => {
 	return (
@@ -8,6 +9,7 @@ export const App = () => {
 			{/* <StepOne /> */}
 			{/* <StepTwo /> */}
 			{/* <StepThree /> */}
+			<StepsFour />
 		</div>
 	);
 };
