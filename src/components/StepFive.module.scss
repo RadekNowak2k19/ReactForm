@@ -1,0 +1,29 @@
+@use "../variables.scss" as *;
+
+.summaryText {
+	padding: 16px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0 auto;
+	align-items: center;
+	gap: 2rem;
+	.thank {
+		font-weight: bold;
+		color: $marineBlue;
+	}
+	.text {
+		color: $coolGray;
+		line-height: 1.5;
+		text-align: center;
+	}
+}
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// Responsive Design
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+/* sm */
+@media (min-width: 640px) {
+	.summaryText {
+		width: 400px;
+	}
+}
