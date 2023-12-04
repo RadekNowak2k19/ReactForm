@@ -1,0 +1,53 @@
+@use "../variables.scss" as *;
+.summary {
+	color: $coolGray;
+	background-color: $lightGray;
+	border-radius: $borderRadius;
+	padding: 12px;
+	.summary_Plan {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		.plan {
+			p {
+				color: $marineBlue;
+				font-weight: bold;
+			}
+			a {
+				color: $coolGray;
+			}
+		}
+		.price {
+			color: $marineBlue;
+			font-weight: bold;
+		}
+	}
+	.summary_Line {
+		width: calc(100% - 1%);
+		height: 1px;
+		background-color: $coolGray;
+		margin: 8px 0;
+	}
+	.summary_MoreOptions {
+		div {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			span {
+				color: $marineBlue;
+			}
+			&:first-child {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}
+.total {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px 12px;
+	span {
+		color: $purplishBlue;
+		font-weight: bold;
+	}
+}
