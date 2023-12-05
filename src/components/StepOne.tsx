@@ -6,7 +6,10 @@ import { Heading } from "../ui/Heading";
 import { Input } from "../ui/Input";
 import { Steps } from "./Steps";
 
-export const StepOne: React.FC<StepProps> = ({ handleChangeStep }) => {
+export const StepOne: React.FC<StepProps> = ({
+	handleChangeStep,
+	inputHandler,
+}) => {
 	return (
 		<>
 			<div className={`formElement_steps`}>
@@ -24,21 +27,21 @@ export const StepOne: React.FC<StepProps> = ({ handleChangeStep }) => {
 								id="name"
 								label="Name"
 								placeholder="e.g Stephen King"
-								onInput={() => {}}
+								onInput={inputHandler}
 							/>
 							<Input
 								type="email"
 								id="email"
 								label="Email Address"
 								placeholder="e.g stephenking@lorem.com"
-								onInput={() => {}}
+								onInput={inputHandler}
 							/>
 							<Input
 								type="number"
 								id="number"
 								label="Number"
 								placeholder="e.g +123456789"
-								onInput={() => {}}
+								onInput={inputHandler}
 							/>
 						</form>
 					</div>

@@ -1,7 +1,6 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import styles from "./Input.module.scss";
 import { cutUrl } from "../helpers/cutUrl";
-import { Checkbox } from "./Checkbox";
 
 interface InputProps {
 	id: string;
@@ -9,7 +8,7 @@ interface InputProps {
 	label?: string;
 	price?: string | number;
 	image?: string;
-	onInput: () => void;
+	onInput: (id: string, inputValue: string) => void;
 	placeholder?: string;
 	adds?: { heading: string; paragraph: string };
 }
@@ -24,10 +23,20 @@ export const Input: FC<InputProps> = ({
 	placeholder,
 	adds,
 }) => {
+	const [inputValue, setInputValue] = useState<string>("");
+	useEffect(() => {
+		onInput(id, inputValue);
+	}, [id, inputValue]);
+
 	if (type === "button") {
 		return (
-			<div className={styles.inputButtonType}>
-				<input className={styles.inputType} type="button" id={id}></input>
+			<div className={styles.inputButtonType} onClick={onInput}>
+				<input
+					className={styles.inputType}
+					type="button"
+					id={id}
+					value={inputValue}
+				></input>
 				<div className={styles.inputBox}>
 					<div className={styles.image}>
 						<img src={image} alt={`Icon ${image}`} />
@@ -65,7 +74,13 @@ export const Input: FC<InputProps> = ({
 				<label htmlFor={id}>{label}</label>
 				<p className={styles.inputError}>Error</p>
 			</div>
-			<input type={type} placeholder={placeholder} id={id} />
+			<input
+				type={type}
+				placeholder={placeholder}
+				id={id}
+				value={inputValue}
+				onChange={e => setInputValue(e.target.value)}
+			/>
 		</div>
 	);
 };
