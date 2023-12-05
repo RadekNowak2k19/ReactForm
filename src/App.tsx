@@ -3,15 +3,23 @@ import { StepTwo } from "./components/StepTwo";
 import { StepThree } from "./components/StepThree";
 import { StepsFour } from "./components/StepFour";
 import { StepFive } from "./components/StepFive";
+import { useState } from "react";
 
 export const App = () => {
+	const [currentStep, setCurrentStep] = useState<number>(0);
+
+	const handleChangeStep = (changeStep: "increase" | "decrease") => {
+		if (changeStep === "increase") setCurrentStep(currentStep + 1);
+		if (changeStep === "decrease") setCurrentStep(currentStep - 1);
+	};
+
 	return (
 		<div className={`formElement`}>
-			{/* <StepOne /> */}
-			{/* <StepTwo /> */}
-			{/* <StepThree /> */}
-			{/* <StepsFour /> */}
-			<StepFive />
+			{currentStep === 0 && <StepOne handleChangeStep={handleChangeStep} />}
+			{currentStep === 1 && <StepTwo handleChangeStep={handleChangeStep} />}
+			{currentStep === 2 && <StepThree handleChangeStep={handleChangeStep} />}
+			{currentStep === 3 && <StepsFour handleChangeStep={handleChangeStep} />}
+			{currentStep === 4 && <StepFive />}
 		</div>
 	);
 };

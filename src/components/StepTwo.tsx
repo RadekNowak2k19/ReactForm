@@ -1,6 +1,7 @@
 import { headingArr } from "../assets/data/heading";
 import { steps } from "../assets/data/steps";
 import { iconAdvanced, iconArcade, iconPro } from "../assets/images";
+import { StepProps } from "../types";
 import { Button } from "../ui/Button";
 import { Heading } from "../ui/Heading";
 import { Input } from "../ui/Input";
@@ -8,7 +9,7 @@ import { Select } from "../ui/Select";
 import { Steps } from "./Steps";
 import styles from "./StepTwo.module.scss";
 
-export const StepTwo = () => {
+export const StepTwo: React.FC<StepProps> = ({ handleChangeStep }) => {
 	return (
 		<>
 			<div className={`formElement_steps`}>
@@ -51,10 +52,16 @@ export const StepTwo = () => {
 					</div>
 				</div>
 				<div className={`buttons`}>
-					<Button onClick={() => console.log("clicked")} propsStyles="goBack">
+					<Button
+						onClick={() => handleChangeStep("decrease")}
+						propsStyles="goBack"
+					>
 						Go Back
 					</Button>
-					<Button onClick={() => console.log("clicked")} propsStyles="nextStep">
+					<Button
+						onClick={() => handleChangeStep("increase")}
+						propsStyles="nextStep"
+					>
 						Next Step
 					</Button>
 				</div>
