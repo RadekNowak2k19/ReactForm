@@ -24,21 +24,21 @@ export const StepTwo: React.FC<StepProps> = ({ handleChangeStep }) => {
 						<form className={styles.formContainer}>
 							<Input
 								type="button"
-								id="button"
+								id="plan"
 								onInput={() => {}}
 								image={iconArcade}
 								price="9"
 							/>
 							<Input
 								type="button"
-								id="button"
+								id="plan"
 								onInput={() => {}}
 								image={iconAdvanced}
 								price="12"
 							/>
 							<Input
 								type="button"
-								id="button"
+								id="plan"
 								onInput={() => {}}
 								image={iconPro}
 								price="15"
